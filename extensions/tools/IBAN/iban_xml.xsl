@@ -6,7 +6,7 @@
                 <xsl:value-of select="ex:Row[starts-with(ex:Cell[1]/ex:Data/text(),'Name of country')]/ex:Cell[2]/ex:Data/text()"/>
             </td>
             <td class="cc">
-                <xsl:value-of select="ex:Row[starts-with(ex:Cell[1]/ex:Data/text(),'Country code') or starts-with(ex:Cell[1]/ex:Data/text(),'IBAN Structure')]/ex:Cell[2]/ex:Data/text()"/>
+                <xsl:value-of select="ex:Row[ex:Cell[1]/ex:Data/text() = 'IBAN prefix country code (ISO 3166)']/ex:Cell[2]/ex:Data/text()"/>
             </td>
             <td class="ibanStruct">
                 <xsl:value-of select="ex:Row[starts-with(ex:Cell[1]/ex:Data/text(),'IBAN structure') or starts-with(ex:Cell[1]/ex:Data/text(),'IBAN Structure')]/ex:Cell[2]/ex:Data/text()"/>
